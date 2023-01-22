@@ -1,0 +1,3 @@
+[submodule "passport-index-dataset"]
+	path = passport-index-dataset
+	url = git@github.com:ilyankou/passport-index-dataset.git
