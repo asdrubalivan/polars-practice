@@ -1,0 +1,27 @@
+[[package]]
+name = "polars"
+version = "0.15.16"
+description = "Blazingly fast DataFrame library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+deltalake = ["deltalake"]
+pandas = ["pyarrow (>=4.0.0)", "pandas"]
+fsspec = ["fsspec"]
+matplotlib = ["matplotlib"]
+numpy = ["numpy (>=1.16.0)"]
+all = ["polars"]
+pyarrow = ["pyarrow (>=4.0.0)"]
+xlsx2csv = ["xlsx2csv (>=0.8.0)"]
+timezone = ["backports.zoneinfo", "tzdata"]
+connectorx = ["connectorx"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "2cb78f167f15d559eaa430d342a9c97c3235cbf811dfd3dec10d01b14bf46930"
+
+[metadata.files]
+polars = []
