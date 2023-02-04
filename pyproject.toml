@@ -5,7 +5,7 @@ description = ""
 authors = ["Asdrúbal Iván Suárez Rivera <asdrubal.ivan.suarez.rivera@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 polars = "^0.15.16"
 streamlit = "^1.17.0"
 mypy = "^0.991"
