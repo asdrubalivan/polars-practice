@@ -29,4 +29,15 @@ def get_visa_countries(country1: str, country2: str) -> pl.DataFrame:
         (pl.col("needs_visa") == True) & (pl.col("needs_visa_right") == False)
     )
 
-    return f.collect()
+    return f.select(
+        [
+            pl.col("Passport"),
+            pl.col("Destination"),
+            pl.col("needs_visa").alias(f"{country1} needs visa"),
+            pl.col("needs_visa_right").alias(f"{country2} needs visa"),
+        ]
+    ).collect()
+
+
+def get_country_list() -> pl.DataFrame:
+    return pl.scan_csv(file).select(pl.col("Passport").unique().sort()).collect()
