@@ -1,6 +1,6 @@
 import polars as pl
 
-file = "./passport-index-dataset/passport-index-tidy-iso3.csv"
+file = "./passport-index-dataset/passport-index-tidy.csv"
 
 pl.Config.set_tbl_rows(100)
 
@@ -11,7 +11,7 @@ Country | Passport
 """
 
 
-def get_visa_countries(country1: str, country2: str):
+def get_visa_countries(country1: str, country2: str) -> pl.DataFrame:
     df_csv = pl.scan_csv(file)
     needs_visa = df_csv.filter(
         (pl.col("Passport") == country1) | (pl.col("Passport") == country2)
@@ -30,6 +30,3 @@ def get_visa_countries(country1: str, country2: str):
     )
 
     return f.collect()
-
-
-print(get_visa_countries("VEN", "ARG"))

@@ -8,6 +8,7 @@ authors = ["Asdrúbal Iván Suárez Rivera <asdrubal.ivan.suarez.rivera@gmail.co
 python = "^3.10"
 polars = "^0.15.16"
 streamlit = "^1.17.0"
+mypy = "^0.991"
 
 [tool.poetry.dev-dependencies]
 black = "^22.12.0"
